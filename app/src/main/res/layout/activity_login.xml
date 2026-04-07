@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connexion"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold"
+            android:textSize="28sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Entrez vos informations"
+            android:textColor="@color/text_secondary"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/etName"
+            style="@style/DabaEditText"
+            android:layout_marginTop="32dp"
+            android:hint="Nom complet"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/etPhone"
+            style="@style/DabaEditText"
+            android:layout_marginTop="16dp"
+            android:hint="Téléphone"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            style="@style/DabaEditText"
+            android:layout_marginTop="16dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+        <Button
+            android:id="@+id/btnContinue"
+            style="@style/DabaButtonPrimary"
+            android:layout_marginTop="28dp"
+            android:text="Continuer" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:hint="Nom du salon"
+            style="@style/DabaEditText"/>
+
+        <EditText
+            android:hint="Téléphone"
+            style="@style/DabaEditText"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:hint="Adresse"
+            style="@style/DabaEditText"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:hint="Description"
+            style="@style/DabaEditText"
+            android:layout_marginTop="12dp"/>
+
+        <!-- ✅ IMPORTANT -->
+        <Button
+            android:id="@+id/btnSave"
+            style="@style/DabaButtonPrimary"
+            android:layout_marginTop="20dp"
+            android:text="Enregistrer"/>
+
+    </LinearLayout>
+</ScrollView>
