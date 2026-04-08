@@ -6,5 +6,8 @@
     <color name="text_primary">#111827</color>
     <color name="text_secondary">#6B7280</color>
     <color name="electric_blue">#1E6BFF</color>
-    <color name="electric_blue_dark">#1557D6</color>
+    <color name="electric_blue_dark">#1557D6</color>*
+    <color name="light_blue_bg">#E3F2FD</color>
+    <color name="primary_blue">#1565C0</color>
+    <color name="secondary_text">#5C6BC0</color>
 </resources>

@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Choisir votre rôle"
+            android:text="@string/choose_role"
             android:textColor="@color/text_primary"
             android:textStyle="bold"
             android:textSize="28sp" />
@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Sélectionnez votre profil"
+            android:text="@string/select_profile"
             android:textColor="@color/text_secondary"
             android:textSize="15sp" />
 
@@ -30,19 +30,19 @@
             android:id="@+id/btnClient"
             style="@style/DabaButtonPrimary"
             android:layout_marginTop="40dp"
-            android:text="Client" />
+            android:text="@string/client" />
 
         <Button
             android:id="@+id/btnSalonHomme"
             style="@style/DabaButtonPrimary"
             android:layout_marginTop="16dp"
-            android:text="Salon Homme" />
+            android:text="@string/salon_homme" />
 
         <Button
             android:id="@+id/btnSalonFilles"
             style="@style/DabaButtonPrimary"
             android:layout_marginTop="16dp"
-            android:text="Salon Filles" />
+            android:text="@string/salon_filles" />
 
     </LinearLayout>
 </ScrollView>

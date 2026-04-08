@@ -1,4 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">DabaCut</string>
+
+    <!-- Splash -->
+    <string name="splash_slogan">YOUR STYLE, AT YOUR PACE</string>
+    <string name="version_format">Version %s</string>
+
+    <!-- Language Selection -->
+    <string name="choose_language">Choose Language</string>
+    <string name="select_preferred_language">Select your preferred language</string>
+    <string name="french">Français</string>
+    <string name="english">English</string>
+    <string name="arabic">العربية</string>
+
+    <!-- Role Selection -->
+    <string name="choose_role">Choose your role</string>
+    <string name="select_profile">Select your profile</string>
+    <string name="client">Client</string>
+    <string name="salon_homme">Men\'s Salon</string>
+    <string name="salon_filles">Women\'s Salon</string>
+
+    <!-- Gender Selection -->
+    <string name="choose_type">Choose type</string>
+    <string name="what_space_to_see">Which space would you like to see?</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+
+    <!-- Category Selection -->
+    <string name="choose_category">Choose category</string>
+    <string name="select_service_level">Select your service level</string>
+    <string name="standard">Standard</string>
+    <string name="class_service">Class</string>
+    <string name="premium">Premium</string>
+
+    <!-- Login -->
+    <string name="login_title">Login</string>
+    <string name="enter_info">Enter your information</string>
+    <string name="hint_full_name">Full Name</string>
+    <string name="hint_phone">Phone</string>
+    <string name="hint_email">Email</string>
+    <string name="btn_continue">Continue</string>
+
+    <!-- Establishment List -->
+    <string name="available_salons">Available Salons</string>
+
+    <!-- Establishment Detail -->
+    <string name="btn_book">Book Now</string>
+    <string name="salon_name_placeholder">Salon Name</string>
+    <string name="description_placeholder">Description</string>
+
+    <!-- Booking -->
+    <string name="confirm_booking">Confirm Booking</string>
+    <string name="my_bookings">My Bookings</string>
+    <string name="service_desired">Desired Service</string>
+    <string name="hint_service">e.g., Haircut + Beard</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="remarque_optional">Notes (Optional)</string>
+    <string name="hint_notes">Special instructions...</string>
+    <string name="booking_confirmed">Booking confirmed!</string>
+    <string name="fill_all_fields">Please fill all fields</string>
+
+    <!-- Owner -->
+    <string name="owner_dashboard">Dashboard</string>
+    <string name="owner_bookings">Received Bookings</string>
+    <string name="create_salon_profile">Create Salon Profile</string>
+    <string name="btn_save">Save</string>
+    <string name="hint_salon_name">Salon Name</string>
+    <string name="hint_address">Address</string>
+    <string name="hint_description">Description</string>
+    <string name="use_my_location">Use my location</string>
+    <string name="location_not_defined">Location not defined</string>
+    <string name="location_captured">Location captured: %s</string>
+    <string name="location_update_success">Location updated</string>
+    <string name="location_update_fail">Unable to get location</string>
+    <string name="location_permission_denied">Location permission denied</string>
+    <string name="salon_type">Salon Type</string>
+    <string name="category">Category</string>
+    <string name="view_bookings">View Bookings</string>
+    <string name="salon_profile">Salon Profile</string>
+    <string name="profile_saved_success">Profile saved successfully!</string>
+
+    <!-- Search -->
+    <string name="search_mode">Search Mode</string>
+    <string name="view_list">View List</string>
+    <string name="view_map">View on Map</string>
+    <string name="role_label">Role: %s</string>
+    <string name="gender_label">Gender: %s</string>
+    <string name="category_label">Category: %s</string>
+
+    <!-- Map -->
+    <string name="back">Back</string>
 </resources>

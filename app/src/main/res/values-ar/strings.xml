@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DabaCut</string>
+
+    <!-- Splash -->
+    <string name="splash_slogan">أسلوبك، بإيقاعك الخاص</string>
+    <string name="version_format">إصدار %s</string>
+
+    <!-- Language Selection -->
+    <string name="choose_language">اختر اللغة</string>
+    <string name="select_preferred_language">اختر لغتك المفضلة</string>
+    <string name="french">Français</string>
+    <string name="english">English</string>
+    <string name="arabic">العربية</string>
+
+    <!-- Role Selection -->
+    <string name="choose_role">اختر دورك</string>
+    <string name="select_profile">اختر ملفك الشخصي</string>
+    <string name="client">زبون</string>
+    <string name="salon_homme">صالون للرجال</string>
+    <string name="salon_filles">صالون للسيدات</string>
+
+    <!-- Gender Selection -->
+    <string name="choose_type">اختر النوع</string>
+    <string name="what_space_to_see">ما هو الفضاء الذي تود رؤيته؟</string>
+    <string name="male">ذكر</string>
+    <string name="female">أنثى</string>
+
+    <!-- Category Selection -->
+    <string name="choose_category">اختر الفئة</string>
+    <string name="select_service_level">اختر مستوى الخدمة</string>
+    <string name="standard">عادي</string>
+    <string name="class_service">راقي</string>
+    <string name="premium">ممتاز</string>
+
+    <!-- Login -->
+    <string name="login_title">تسجيل الدخول</string>
+    <string name="enter_info">أدخل معلوماتك</string>
+    <string name="hint_full_name">الاسم الكامل</string>
+    <string name="hint_phone">الهاتف</string>
+    <string name="hint_email">البريد الإلكتروني</string>
+    <string name="btn_continue">متابعة</string>
+
+    <!-- Establishment List -->
+    <string name="available_salons">الصالونات المتاحة</string>
+
+    <!-- Establishment Detail -->
+    <string name="btn_book">احجز الآن</string>
+    <string name="salon_name_placeholder">اسم الصالون</string>
+    <string name="description_placeholder">الوصف</string>
+    <string name="address_label">العنوان: %s</string>
+    <string name="contact_label">الاتصال: %s</string>
+
+    <!-- Booking -->
+    <string name="confirm_booking">تأكيد الحجز</string>
+    <string name="my_bookings">حجوزاتي</string>
+    <string name="service_desired">الخدمة المطلوبة</string>
+    <string name="hint_service">مثال: حلاقة + ذقن</string>
+    <string name="date">التاريخ</string>
+    <string name="time">الوقت</string>
+    <string name="remarque_optional">ملاحظة (اختياري)</string>
+    <string name="hint_notes">تعليمات خاصة...</string>
+    <string name="booking_confirmed">تم تأكيد الحجز!</string>
+    <string name="fill_all_fields">يرجى ملء جميع الحقول</string>
+
+    <!-- Owner -->
+    <string name="owner_dashboard">لوحة التحكم</string>
+    <string name="owner_bookings">الحجوزات المستلمة</string>
+    <string name="create_salon_profile">إنشاء ملف صالون</string>
+    <string name="btn_save">حفظ</string>
+    <string name="hint_salon_name">اسم الصالون</string>
+    <string name="hint_address">العنوان</string>
+    <string name="hint_description">الوصف</string>
+    <string name="use_my_location">استخدم موقعي</string>
+    <string name="location_not_defined">الموقع غير محدد</string>
+    <string name="location_captured">تم تحديد الموقع: %s</string>
+    <string name="location_update_success">تم تحديث الموقع</string>
+    <string name="location_update_fail">تعذر الحصول على الموقع</string>
+    <string name="location_permission_denied">تم رفض إذن الوصول للموقع</string>
+    <string name="salon_type">نوع الصالون</string>
+    <string name="category">الفئة</string>
+    <string name="view_bookings">عرض الحجوزات</string>
+    <string name="salon_profile">ملف الصالون</string>
+    <string name="profile_saved_success">تم حفظ الملف بنجاح!</string>
+
+    <!-- Search -->
+    <string name="search_mode">وضع البحث</string>
+    <string name="view_list">عرض القائمة</string>
+    <string name="view_map">عرض على الخريطة</string>
+    <string name="role_label">الدور: %s</string>
+    <string name="gender_label">النوع: %s</string>
+    <string name="category_label">الفئة: %s</string>
+
+    <!-- Map -->
+    <string name="back">رجوع</string>
+    <string name="no_salon_found">لم يتم العثور على صالونات لهذه المعايير</string>
+</resources>

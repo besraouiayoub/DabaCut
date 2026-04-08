@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Choisir la langue"
+            android:text="@string/choose_language"
             android:textColor="@color/text_primary"
             android:textStyle="bold"
             android:textSize="28sp" />
@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Sélectionnez votre langue préférée"
+            android:text="@string/select_preferred_language"
             android:textColor="@color/text_secondary"
             android:textSize="15sp" />
 
@@ -30,19 +30,19 @@
             android:id="@+id/btnFrench"
             style="@style/DabaButtonPrimary"
             android:layout_marginTop="40dp"
-            android:text="Français" />
+            android:text="@string/french" />
 
         <Button
             android:id="@+id/btnEnglish"
             style="@style/DabaButtonPrimary"
             android:layout_marginTop="16dp"
-            android:text="English" />
+            android:text="@string/english" />
 
         <Button
             android:id="@+id/btnArabic"
             style="@style/DabaButtonPrimary"
             android:layout_marginTop="16dp"
-            android:text="العربية" />
+            android:text="@string/arabic" />
 
     </LinearLayout>
 </ScrollView>

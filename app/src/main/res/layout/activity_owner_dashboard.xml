@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="20dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="20dp">
 
-    <!-- Bouton profil -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/owner_dashboard"
+        android:textColor="@color/text_primary"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
     <Button
         android:id="@+id/btnProfile"
         style="@style/DabaButtonPrimary"
-        android:text="Profil du salon"/>
+        android:text="Profil du salon" />
 
-    <!-- Bouton réservations -->
     <Button
         android:id="@+id/btnBookings"
         style="@style/DabaButtonPrimary"
         android:layout_marginTop="16dp"
-        android:text="Voir réservations"/>
+        android:text="Voir réservations" />
 
 </LinearLayout>

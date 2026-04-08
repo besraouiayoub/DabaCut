@@ -4,9 +4,7 @@ plugins {
 
 android {
     namespace 'com.example.dabacut'
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk 36
 
     defaultConfig {
         applicationId "com.example.dabacut"
@@ -35,6 +33,8 @@ dependencies {
     implementation libs.material
     implementation libs.activity
     implementation libs.constraintlayout
+    implementation libs.play.services.maps
+    implementation libs.play.services.location
 
     implementation "androidx.recyclerview:recyclerview:1.3.2"
 

@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Choisir le type"
+            android:text="@string/choose_type"
             android:textColor="@color/text_primary"
             android:textStyle="bold"
             android:textSize="28sp" />
@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Quel espace souhaitez-vous voir ?"
+            android:text="@string/what_space_to_see"
             android:textColor="@color/text_secondary"
             android:textSize="15sp" />
 
@@ -30,13 +30,13 @@
             android:id="@+id/btnMale"
             style="@style/DabaButtonPrimary"
             android:layout_marginTop="40dp"
-            android:text="Homme" />
+            android:text="@string/male" />
 
         <Button
             android:id="@+id/btnFemale"
             style="@style/DabaButtonPrimary"
             android:layout_marginTop="16dp"
-            android:text="Femme" />
+            android:text="@string/female" />
 
     </LinearLayout>
 </ScrollView>

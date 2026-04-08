@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Choisir la catégorie"
+            android:text="@string/choose_category"
             android:textColor="@color/text_primary"
             android:textStyle="bold"
             android:textSize="28sp" />
@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Sélectionnez votre niveau de service"
+            android:text="@string/select_service_level"
             android:textColor="@color/text_secondary"
             android:textSize="15sp" />
 
@@ -30,19 +30,19 @@
             android:id="@+id/btnStandard"
             style="@style/DabaButtonPrimary"
             android:layout_marginTop="40dp"
-            android:text="Standard" />
+            android:text="@string/standard" />
 
         <Button
             android:id="@+id/btnClass"
             style="@style/DabaButtonPrimary"
             android:layout_marginTop="16dp"
-            android:text="Class" />
+            android:text="@string/class_service" />
 
         <Button
             android:id="@+id/btnPremium"
             style="@style/DabaButtonPrimary"
             android:layout_marginTop="16dp"
-            android:text="Premium" />
+            android:text="@string/premium" />
 
     </LinearLayout>
 </ScrollView>

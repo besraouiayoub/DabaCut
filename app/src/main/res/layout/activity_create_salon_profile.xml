@@ -5,36 +5,107 @@
     android:background="@color/white">
 
     <LinearLayout
-        android:orientation="vertical"
-        android:padding="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:text="@string/create_salon_profile"
+            android:textColor="@color/text_primary"
+            android:textSize="28sp"
+            android:textStyle="bold" />
 
         <EditText
-            android:hint="Nom du salon"
-            style="@style/DabaEditText"/>
-
-        <EditText
-            android:hint="Téléphone"
+            android:id="@+id/etSalonName"
             style="@style/DabaEditText"
-            android:layout_marginTop="12dp"/>
+            android:hint="@string/hint_salon_name"
+            android:importantForAutofill="no"
+            android:inputType="textCapWords" />
 
         <EditText
-            android:hint="Adresse"
+            android:id="@+id/etSalonPhone"
             style="@style/DabaEditText"
-            android:layout_marginTop="12dp"/>
+            android:layout_marginTop="16dp"
+            android:hint="@string/hint_phone"
+            android:importantForAutofill="no"
+            android:inputType="phone" />
 
         <EditText
-            android:hint="Description"
+            android:id="@+id/etSalonAddress"
             style="@style/DabaEditText"
-            android:layout_marginTop="12dp"/>
+            android:layout_marginTop="16dp"
+            android:hint="@string/hint_address"
+            android:importantForAutofill="no"
+            android:inputType="textPostalAddress" />
 
-        <!-- ✅ IMPORTANT -->
+        <Button
+            android:id="@+id/btnGetLocation"
+            style="@style/DabaButtonSecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:text="Utiliser ma position"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvLocationStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Position non définie"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Type de Salon"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinnerType"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_edittext" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Catégorie"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_edittext" />
+
+        <EditText
+            android:id="@+id/etSalonDesc"
+            style="@style/DabaEditText"
+            android:layout_height="120dp"
+            android:layout_marginTop="16dp"
+            android:gravity="top"
+            android:hint="@string/hint_description"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:paddingTop="16dp" />
+
         <Button
             android:id="@+id/btnSave"
             style="@style/DabaButtonPrimary"
-            android:layout_marginTop="20dp"
-            android:text="Enregistrer"/>
+            android:layout_marginTop="32dp"
+            android:text="@string/btn_save" />
 
     </LinearLayout>
 </ScrollView>

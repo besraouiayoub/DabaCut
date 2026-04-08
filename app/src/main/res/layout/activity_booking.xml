@@ -1,12 +1,106 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="20dp"
-    android:background="@color/white"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
-    <Button
-        android:id="@+id/btnConfirm"
-        style="@style/DabaButtonPrimary"
-        android:text="Confirmer réservation"/>
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvSalonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nom du Salon"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Complétez votre réservation"
+            android:textColor="@color/text_secondary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Service souhaité"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etService"
+            style="@style/DabaEditText"
+            android:layout_marginTop="8dp"
+            android:hint="Ex: Coupe + Barbe"
+            android:inputType="text"
+            android:importantForAutofill="no" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Date"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etDate"
+            style="@style/DabaEditText"
+            android:layout_marginTop="8dp"
+            android:hint="JJ/MM/AAAA"
+            android:focusable="false"
+            android:clickable="true"
+            android:importantForAutofill="no" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Heure"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etTime"
+            style="@style/DabaEditText"
+            android:layout_marginTop="8dp"
+            android:hint="HH:MM"
+            android:focusable="false"
+            android:clickable="true"
+            android:importantForAutofill="no" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Remarque (optionnel)"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etNote"
+            style="@style/DabaEditText"
+            android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            android:gravity="top"
+            android:hint="Instructions spéciales..."
+            android:inputType="textMultiLine"
+            android:paddingTop="16dp"
+            android:importantForAutofill="no" />
+
+        <Button
+            android:id="@+id/btnConfirm"
+            style="@style/DabaButtonPrimary"
+            android:layout_marginTop="32dp"
+            android:text="@string/confirm_booking" />
+
+    </LinearLayout>
+</ScrollView>

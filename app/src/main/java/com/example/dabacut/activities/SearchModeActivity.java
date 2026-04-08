@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -25,26 +24,26 @@ public class SearchModeActivity extends AppCompatActivity {
 
         showSummary();
 
-        // ✅ MODE LISTE → ouvre la liste des salons
         btnList.setOnClickListener(v -> {
             Intent intent = new Intent(this, EstablishmentListActivity.class);
-
-            // passer les données (important pour filtre plus tard)
-            intent.putExtra(RoleSelectionActivity.EXTRA_ROLE,
-                    getIntent().getStringExtra(RoleSelectionActivity.EXTRA_ROLE));
-
-            intent.putExtra(GenderSelectionActivity.EXTRA_GENDER,
-                    getIntent().getStringExtra(GenderSelectionActivity.EXTRA_GENDER));
-
-            intent.putExtra(CategorySelectionActivity.EXTRA_CATEGORY,
-                    getIntent().getStringExtra(CategorySelectionActivity.EXTRA_CATEGORY));
-
+            passExtras(intent);
             startActivity(intent);
         });
 
-        // ❌ MAP pas encore
-        btnMap.setOnClickListener(v ->
-                Toast.makeText(this, "Carte bientôt disponible", Toast.LENGTH_SHORT).show());
+        btnMap.setOnClickListener(v -> {
+            Intent intent = new Intent(this, MapActivity.class);
+            passExtras(intent);
+            startActivity(intent);
+        });
+    }
+
+    private void passExtras(Intent intent) {
+        intent.putExtra(RoleSelectionActivity.EXTRA_ROLE,
+                getIntent().getStringExtra(RoleSelectionActivity.EXTRA_ROLE));
+        intent.putExtra(GenderSelectionActivity.EXTRA_GENDER,
+                getIntent().getStringExtra(GenderSelectionActivity.EXTRA_GENDER));
+        intent.putExtra(CategorySelectionActivity.EXTRA_CATEGORY,
+                getIntent().getStringExtra(CategorySelectionActivity.EXTRA_CATEGORY));
     }
 
     private void showSummary() {
