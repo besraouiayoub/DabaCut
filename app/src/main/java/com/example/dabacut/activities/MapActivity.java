@@ -8,12 +8,12 @@ import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import com.example.dabacut.R;
+import com.example.dabacut.data.SalonRepository;
 import com.example.dabacut.models.Establishment;
-import com.example.dabacut.utils.DataManager;
+import com.example.dabacut.utils.SessionManager;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -24,7 +24,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.List;
 
-public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class MapActivity extends BaseClientActivity implements OnMapReadyCallback {
 
     private static final String TAG = "MapActivity";
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1001;
@@ -37,20 +37,31 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
 
-        // Get filter data from intent
+        SessionManager sm = new SessionManager(this);
         selectedGender = getIntent().getStringExtra(GenderSelectionActivity.EXTRA_GENDER);
         selectedCategory = getIntent().getStringExtra(CategorySelectionActivity.EXTRA_CATEGORY);
+        if (selectedGender == null) {
+            selectedGender = sm.getSearchGender();
+        }
+        if (selectedCategory == null) {
+            selectedCategory = sm.getSearchCategory();
+        }
 
-        Log.d(TAG, "Filters - Gender: " + selectedGender + ", Category: " + selectedCategory);
-
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         if (mapFragment != null) {
             mapFragment.getMapAsync(this);
         }
+    }
 
-        findViewById(R.id.btnBack).setOnClickListener(v -> finish());
+    @Override
+    protected int clientNavSelectedItemId() {
+        return R.id.nav_client_map;
+    }
+
+    @Override
+    protected int toolbarTitleRes() {
+        return R.string.view_map;
     }
 
     @Override
@@ -58,54 +69,13 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         mMap = googleMap;
         Log.d(TAG, "onMapReady: Google Maps is ready");
 
-        // UI Settings
         mMap.getUiSettings().setZoomControlsEnabled(true);
         mMap.getUiSettings().setMapToolbarEnabled(true);
 
-        // Request permissions and enable "My Location"
         enableMyLocation();
 
-        // Load and filter establishments
-        List<Establishment> allSalons = DataManager.getInstance().getEstablishments();
-        LatLng lastLatLng = new LatLng(33.9716, -6.8498); // Default: Rabat, Morocco
-        int markerCount = 0;
+        SalonRepository.getInstance(this).getEstablishments(allSalons -> applyMarkers(allSalons));
 
-        for (Establishment e : allSalons) {
-            if (isMatchingFilter(e)) {
-                double lat = e.getLatitude();
-                double lng = e.getLongitude();
-
-                // If coordinates are missing (dummy data), generate semi-random ones around Rabat
-                if (lat == 0 && lng == 0) {
-                    lat = 33.97 + (Math.random() * 0.08 - 0.04);
-                    lng = -6.84 + (Math.random() * 0.08 - 0.04);
-                }
-
-                LatLng pos = new LatLng(lat, lng);
-                Marker marker = mMap.addMarker(new MarkerOptions()
-                        .position(pos)
-                        .title(e.getName())
-                        .snippet(e.getCategory() + " - " + e.getTypeSalon()));
-                
-                if (marker != null) {
-                    marker.setTag(e);
-                }
-                lastLatLng = pos;
-                markerCount++;
-            }
-        }
-
-        Log.d(TAG, "Markers added: " + markerCount);
-
-        // Zoom to the markers or center on Rabat
-        if (markerCount > 0) {
-            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(lastLatLng, 13));
-        } else {
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(lastLatLng, 12));
-            Toast.makeText(this, "Aucun salon trouvé pour ces filtres", Toast.LENGTH_LONG).show();
-        }
-
-        // Info Window Click Listener -> Detail Activity
         mMap.setOnInfoWindowClickListener(marker -> {
             Establishment e = (Establishment) marker.getTag();
             if (e != null) {
@@ -121,6 +91,44 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         });
     }
 
+    private void applyMarkers(List<Establishment> allSalons) {
+        LatLng lastLatLng = new LatLng(33.9716, -6.8498);
+        int markerCount = 0;
+
+        for (Establishment e : allSalons) {
+            if (isMatchingFilter(e)) {
+                double lat = e.getLatitude();
+                double lng = e.getLongitude();
+
+                if (lat == 0 && lng == 0) {
+                    lat = 33.97 + (Math.random() * 0.08 - 0.04);
+                    lng = -6.84 + (Math.random() * 0.08 - 0.04);
+                }
+
+                LatLng pos = new LatLng(lat, lng);
+                Marker marker = mMap.addMarker(new MarkerOptions()
+                        .position(pos)
+                        .title(e.getName())
+                        .snippet(e.getCategory() + " - " + e.getTypeSalon()));
+
+                if (marker != null) {
+                    marker.setTag(e);
+                }
+                lastLatLng = pos;
+                markerCount++;
+            }
+        }
+
+        Log.d(TAG, "Markers added: " + markerCount);
+
+        if (markerCount > 0) {
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(lastLatLng, 13));
+        } else {
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(lastLatLng, 12));
+            Toast.makeText(this, R.string.no_salon_found, Toast.LENGTH_LONG).show();
+        }
+    }
+
     private void enableMyLocation() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_PERMISSION_REQUEST_CODE);
@@ -132,7 +140,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     }
 
     private boolean isMatchingFilter(Establishment e) {
-        // If no filters provided, show all (for debug)
         if (selectedGender == null || selectedCategory == null) return true;
 
         boolean genderMatch = false;
@@ -141,9 +148,9 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         } else if ("femme".equalsIgnoreCase(selectedGender) && "Salon Filles".equalsIgnoreCase(e.getTypeSalon())) {
             genderMatch = true;
         }
-        
+
         boolean categoryMatch = e.getCategory().equalsIgnoreCase(selectedCategory);
-        
+
         return genderMatch && categoryMatch;
     }
 

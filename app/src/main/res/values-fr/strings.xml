@@ -35,11 +35,24 @@
 
     <!-- Login -->
     <string name="login_title">Connexion</string>
+    <string name="login_username_password_hint">Connectez-vous avec votre nom d\'utilisateur et mot de passe.</string>
     <string name="enter_info">Entrez vos informations</string>
+    <string name="hint_username">Nom d\'utilisateur</string>
+    <string name="hint_password">Mot de passe</string>
+    <string name="hint_password_confirm">Confirmer le mot de passe</string>
     <string name="hint_full_name">Nom complet</string>
     <string name="hint_phone">Téléphone</string>
     <string name="hint_email">Email</string>
     <string name="btn_continue">Continuer</string>
+    <string name="btn_login">Se connecter</string>
+    <string name="btn_create_account">Créer un compte</string>
+    <string name="register_title">Créer un compte</string>
+    <string name="register_subtitle">Choisissez un nom d\'utilisateur et un mot de passe. Vous les utiliserez pour vous connecter.</string>
+    <string name="btn_register">S\'inscrire</string>
+    <string name="error_username_taken">Ce nom d\'utilisateur est déjà pris</string>
+    <string name="error_password_mismatch">Les mots de passe ne correspondent pas</string>
+    <string name="error_bad_credentials">Identifiant ou mot de passe incorrect</string>
+    <string name="error_role_mismatch">Ce compte ne correspond pas au rôle sélectionné.</string>
 
     <!-- Establishment List -->
     <string name="available_salons">Salons disponibles</string>
@@ -61,7 +74,45 @@
     <string name="remarque_optional">Remarque (optionnel)</string>
     <string name="hint_notes">Instructions spéciales...</string>
     <string name="booking_confirmed">Réservation confirmée !</string>
+    <string name="booking_guest_name">Invité</string>
+    <string name="booking_guest_phone">0000000000</string>
     <string name="fill_all_fields">Veuillez remplir tous les champs</string>
+    <string name="booking_form_subtitle">Complétez votre réservation</string>
+    <string name="booking_slot_fixed_hint">La date et l\'heure sont fixées par le salon et ne sont pas modifiables.</string>
+    <string name="booking_price_label">Total</string>
+    <string name="booking_confirm_action">Vérifier et confirmer</string>
+    <string name="booking_confirm_dialog_title">Confirmer cette réservation ?</string>
+    <string name="booking_confirm_dialog_body">Salon : %1$s\nService : %2$s\nDate : %3$s\nHeure : %4$s\nDurée indicative : %7$d min\nPaiement : %8$s\n\nPrix total : %5$s\n\nRemarque : %6$s</string>
+    <string name="booking_duration_label">Durée indicative : %1$d min</string>
+    <string name="payment_method_title">Paiement</string>
+    <string name="payment_at_salon">Au salon</string>
+    <string name="payment_online_demo">En ligne (démo)</string>
+    <string name="booking_status_pending">En attente</string>
+    <string name="booking_status_confirmed">Confirmée</string>
+    <string name="booking_status_rejected">Refusée</string>
+    <string name="booking_status_cancelled">Annulée</string>
+    <string name="notification_channel_bookings_name">Rappels de rendez-vous</string>
+    <string name="notification_channel_bookings_desc">Rappels avant votre rendez-vous confirmé</string>
+    <string name="booking_reminder_notif_title">Rendez-vous à venir</string>
+    <string name="booking_reminder_24h_body">%1$s — rendez-vous le %2$s à %3$s (dans 24 h)</string>
+    <string name="booking_reminder_1h_body">%1$s — votre rendez-vous est à %2$s (dans 1 h)</string>
+    <string name="booking_dialog_confirm_yes">Confirmer</string>
+    <string name="owner_detail_price">Total : %s</string>
+    <string name="owner_detail_notes">Remarque : %s</string>
+    <string name="booking_services_section_title">Services et tarifs</string>
+    <string name="booking_services_picker_hint">Cochez les prestations souhaitées. Le prix de chaque service est affiché sous son nom.</string>
+    <string name="booking_no_service_selected">Cochez au moins un service.</string>
+    <string name="booking_no_slot_available">Aucun créneau libre dans les prochaines semaines. Réessayez plus tard.</string>
+    <string name="booking_slot_suggested_toast">Créneau proposé : %1$s à %2$s</string>
+    <string name="booking_slot_conflict">Ce créneau vient d\'être pris. Nouveau créneau proposé : %1$s à %2$s. Veuillez confirmer à nouveau.</string>
+    <string name="service_men_cut">Coupe homme</string>
+    <string name="service_men_beard">Taille de barbe</string>
+    <string name="service_men_combo">Coupe + barbe</string>
+    <string name="service_men_styling">Coiffage / finition</string>
+    <string name="service_women_cut">Coupe femme</string>
+    <string name="service_women_brush">Brushings</string>
+    <string name="service_women_color">Couleur / mèches</string>
+    <string name="service_women_care">Soin / traitement</string>
 
     <!-- Owner -->
     <string name="owner_dashboard">Tableau de bord</string>
@@ -84,6 +135,7 @@
     <string name="profile_saved_success">Profil enregistré avec succès !</string>
 
     <!-- Search -->
+    <string name="search_current_filters">Vos filtres actuels</string>
     <string name="search_mode">Mode de Recherche</string>
     <string name="view_list">Voir en liste</string>
     <string name="view_map">Voir sur carte</string>
@@ -94,4 +146,48 @@
     <!-- Map -->
     <string name="back">Retour</string>
     <string name="no_salon_found">Aucun salon trouvé pour ces filtres</string>
+
+    <string name="nav_home">Accueil</string>
+    <string name="nav_salons">Salons</string>
+    <string name="nav_map">Carte</string>
+    <string name="nav_my_bookings">Mes réservations</string>
+    <string name="nav_my_account">Compte</string>
+
+    <string name="profile_role_section">Connecté en tant que</string>
+    <string name="profile_logout">Se déconnecter</string>
+    <string name="role_label_client">Client — prendre rendez-vous</string>
+    <string name="role_label_owner_men">Propriétaire — salon homme</string>
+    <string name="role_label_owner_women">Propriétaire — salon femmes</string>
+
+    <string name="owner_welcome_title">Gérez votre salon</string>
+    <string name="owner_welcome_subtitle">Utilisez le menu en bas pour le profil ou les réservations.</string>
+    <string name="owner_booking_count">%d réservation(s)</string>
+    <string name="owner_bookings_list_hint">Appuyez sur une réservation pour voir le détail.</string>
+    <string name="owner_booking_detail_title">Détail de la réservation</string>
+    <string name="owner_detail_client_line">%1$s (%2$s)</string>
+    <string name="owner_detail_client_user">Nom d\'utilisateur : %s</string>
+    <string name="owner_detail_client_name">Client : %s</string>
+    <string name="owner_detail_phone">Téléphone : %s</string>
+    <string name="owner_salon_already_created">Vous avez déjà un profil salon. Vous pouvez mettre à jour les informations ci-dessous.</string>
+    <string name="hours_section_title">Horaires d\'ouverture</string>
+    <string name="hours_weekdays">Lun–Ven</string>
+    <string name="hours_saturday">Samedi</string>
+    <string name="hours_sunday">Dimanche</string>
+    <string name="open_saturday">Ouvert le samedi</string>
+    <string name="open_sunday">Ouvert le dimanche</string>
+    <string name="hint_time_from_to">ex. 09:00</string>
+    <string name="establishment_search_hint">Rechercher un salon</string>
+    <string name="sort_by_distance">Trier par distance</string>
+    <string name="distance_km_format">%1$.1f km</string>
+    <string name="owner_detail_status">Statut : %s</string>
+    <string name="owner_detail_payment">Paiement : %s</string>
+    <string name="owner_detail_duration">Durée : %1$d min</string>
+    <string name="owner_accept_booking">Accepter</string>
+    <string name="owner_reject_booking">Refuser</string>
+    <string name="my_booking_actions_title">Réservation</string>
+    <string name="my_booking_cancel">Annuler</string>
+    <string name="my_booking_reschedule">Reporter</string>
+    <string name="my_booking_cancelled">Réservation annulée</string>
+    <string name="my_booking_cannot_cancel">Cette réservation ne peut plus être modifiée</string>
+    <string name="profile_label_username">Nom d\'utilisateur</string>
 </resources>

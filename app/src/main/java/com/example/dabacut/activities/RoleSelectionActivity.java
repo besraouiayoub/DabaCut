@@ -4,11 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.dabacut.R;
 
-public class RoleSelectionActivity extends AppCompatActivity {
+public class RoleSelectionActivity extends BaseToolbarActivity {
 
     public static final String EXTRA_ROLE = "role";
 
@@ -26,6 +24,11 @@ public class RoleSelectionActivity extends AppCompatActivity {
         btnClient.setOnClickListener(v -> openLogin(language, "client"));
         btnSalonHomme.setOnClickListener(v -> openLogin(language, "salon_homme"));
         btnSalonFilles.setOnClickListener(v -> openLogin(language, "salon_filles"));
+    }
+
+    @Override
+    protected int toolbarTitleRes() {
+        return R.string.choose_role;
     }
 
     private void openLogin(String language, String role) {

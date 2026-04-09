@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_client_home"
+        android:icon="@drawable/ic_nav_home"
+        android:title="@string/nav_home" />
+    <item
+        android:id="@+id/nav_client_salons"
+        android:icon="@drawable/ic_nav_list"
+        android:title="@string/nav_salons" />
+    <item
+        android:id="@+id/nav_client_map"
+        android:icon="@drawable/ic_nav_map"
+        android:title="@string/nav_map" />
+    <item
+        android:id="@+id/nav_client_bookings"
+        android:icon="@drawable/ic_nav_bookings"
+        android:title="@string/nav_my_bookings" />
+    <item
+        android:id="@+id/nav_client_profile"
+        android:icon="@drawable/ic_nav_person"
+        android:title="@string/nav_my_account" />
+</menu>

@@ -5,11 +5,11 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.dabacut.R;
+import com.example.dabacut.utils.NavIntents;
+import com.example.dabacut.utils.SessionManager;
 
-public class SearchModeActivity extends AppCompatActivity {
+public class SearchModeActivity extends BaseClientActivity {
 
     private TextView tvSummary;
 
@@ -18,6 +18,13 @@ public class SearchModeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_mode);
 
+        SessionManager sessionManager = new SessionManager(this);
+        String gender = getIntent().getStringExtra(GenderSelectionActivity.EXTRA_GENDER);
+        String category = getIntent().getStringExtra(CategorySelectionActivity.EXTRA_CATEGORY);
+        if (gender != null && category != null) {
+            sessionManager.saveSearchFilters(gender, category);
+        }
+
         tvSummary = findViewById(R.id.tvSummary);
         Button btnList = findViewById(R.id.btnListMode);
         Button btnMap = findViewById(R.id.btnMapMode);
@@ -25,16 +32,26 @@ public class SearchModeActivity extends AppCompatActivity {
         showSummary();
 
         btnList.setOnClickListener(v -> {
-            Intent intent = new Intent(this, EstablishmentListActivity.class);
+            Intent intent = NavIntents.establishmentList(this);
             passExtras(intent);
             startActivity(intent);
         });
 
         btnMap.setOnClickListener(v -> {
-            Intent intent = new Intent(this, MapActivity.class);
+            Intent intent = NavIntents.map(this);
             passExtras(intent);
             startActivity(intent);
         });
+    }
+
+    @Override
+    protected int clientNavSelectedItemId() {
+        return R.id.nav_client_home;
+    }
+
+    @Override
+    protected int toolbarTitleRes() {
+        return R.string.search_mode;
     }
 
     private void passExtras(Intent intent) {
@@ -47,13 +64,23 @@ public class SearchModeActivity extends AppCompatActivity {
     }
 
     private void showSummary() {
+        SessionManager sm = new SessionManager(this);
         String role = getIntent().getStringExtra(RoleSelectionActivity.EXTRA_ROLE);
+        if (role == null && sm.getUserDetails() != null) {
+            role = sm.getUserDetails().getRole();
+        }
         String gender = getIntent().getStringExtra(GenderSelectionActivity.EXTRA_GENDER);
+        if (gender == null) {
+            gender = sm.getSearchGender();
+        }
         String category = getIntent().getStringExtra(CategorySelectionActivity.EXTRA_CATEGORY);
+        if (category == null) {
+            category = sm.getSearchCategory();
+        }
 
-        String summary = "Rôle : " + safe(role)
-                + "\nGenre : " + safe(gender)
-                + "\nCatégorie : " + safe(category);
+        String summary = getString(R.string.role_label, safe(role))
+                + "\n" + getString(R.string.gender_label, safe(gender))
+                + "\n" + getString(R.string.category_label, safe(category));
 
         tvSummary.setText(summary);
     }

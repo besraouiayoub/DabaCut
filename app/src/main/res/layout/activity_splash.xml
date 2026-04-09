@@ -1,37 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@drawable/bg_splash">
 
-    <View
-        android:id="@+id/viewBackground"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/electric_blue"
-        android:alpha="0.05" />
-
+    <!-- CONTENU CENTRAL -->
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="362dp"
+        android:layout_height="324dp"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        android:padding="32dp"
+        app:layout_constraintBottom_toTopOf="@id/progressBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed">
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- LOGO -->
+
+        <!-- NOM APP -->
 
         <ImageView
             android:id="@+id/imgLogo"
-            android:layout_width="385dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:adjustViewBounds="true"
-            android:maxHeight="300dp"
+            android:layout_width="164dp"
+            android:layout_height="187dp"
+            android:layout_marginBottom="20dp"
             android:scaleType="fitCenter"
             android:src="@drawable/gemini_generated_image" />
 
@@ -39,47 +35,50 @@
             android:id="@+id/tvLogo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-black"
+            android:letterSpacing="0.05"
             android:text="@string/app_name"
             android:textColor="@color/electric_blue"
-            android:textSize="48sp"
+            android:textSize="36sp"
             android:textStyle="bold" />
 
+        <!-- SLOGAN -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:letterSpacing="0.1"
+            android:layout_marginTop="6dp"
+            android:letterSpacing="0.15"
             android:text="@string/splash_slogan"
             android:textAllCaps="true"
             android:textColor="@color/text_secondary"
-            android:textSize="12sp"
-            android:textStyle="bold" />
+            android:textSize="13sp" />
 
     </LinearLayout>
 
+    <!-- PROGRESS BAR MODERNE -->
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
+        android:layout_width="180dp"
+        android:layout_height="6dp"
         android:indeterminate="true"
         android:indeterminateTint="@color/electric_blue"
-        app:layout_constraintBottom_toTopOf="@+id/tvVersion"
+        android:progressDrawable="@drawable/progress_custom"
+        app:layout_constraintBottom_toTopOf="@id/tvVersion"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginBottom="40dp" />
 
+    <!-- VERSION -->
     <TextView
         android:id="@+id/tvVersion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
         android:text="Version 1.0"
         android:textColor="@color/text_secondary"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginBottom="20dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

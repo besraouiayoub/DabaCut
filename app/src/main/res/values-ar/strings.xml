@@ -61,7 +61,45 @@
     <string name="remarque_optional">ملاحظة (اختياري)</string>
     <string name="hint_notes">تعليمات خاصة...</string>
     <string name="booking_confirmed">تم تأكيد الحجز!</string>
+    <string name="booking_guest_name">زائر</string>
+    <string name="booking_guest_phone">0000000000</string>
     <string name="fill_all_fields">يرجى ملء جميع الحقول</string>
+    <string name="booking_form_subtitle">أكمل حجزك</string>
+    <string name="booking_slot_fixed_hint">التاريخ والوقت يحددهما الصالون ولا يمكن تغييرهما.</string>
+    <string name="booking_price_label">الإجمالي</string>
+    <string name="booking_confirm_action">مراجعة وتأكيد</string>
+    <string name="booking_confirm_dialog_title">تأكيد هذا الحجز؟</string>
+    <string name="booking_confirm_dialog_body">الصالون: %1$s\nالخدمة: %2$s\nالتاريخ: %3$s\nالوقت: %4$s\nالمدة التقريبية: %7$d دقيقة\nالدفع: %8$s\n\nالإجمالي: %5$s\n\nملاحظات: %6$s</string>
+    <string name="booking_duration_label">المدة التقريبية: %1$d دقيقة</string>
+    <string name="payment_method_title">الدفع</string>
+    <string name="payment_at_salon">في الصالون</string>
+    <string name="payment_online_demo">عبر الإنترنت (تجريبي)</string>
+    <string name="booking_status_pending">قيد الانتظار</string>
+    <string name="booking_status_confirmed">مؤكد</string>
+    <string name="booking_status_rejected">مرفوض</string>
+    <string name="booking_status_cancelled">ملغى</string>
+    <string name="notification_channel_bookings_name">تذكيرات المواعيد</string>
+    <string name="notification_channel_bookings_desc">تذكيرات قبل الموعد المؤكد</string>
+    <string name="booking_reminder_notif_title">موعد قادم</string>
+    <string name="booking_reminder_24h_body">%1$s — الموعد %2$s الساعة %3$s (خلال 24 ساعة)</string>
+    <string name="booking_reminder_1h_body">%1$s — موعدك الساعة %2$s (خلال ساعة)</string>
+    <string name="booking_dialog_confirm_yes">تأكيد</string>
+    <string name="owner_detail_price">الإجمالي: %s</string>
+    <string name="owner_detail_notes">ملاحظات: %s</string>
+    <string name="booking_services_section_title">الخدمات والأسعار</string>
+    <string name="booking_services_picker_hint">حدد الخدمات المطلوبة. يظهر سعر كل خدمة تحت اسمها.</string>
+    <string name="booking_no_service_selected">حدد خدمة واحدة على الأقل.</string>
+    <string name="booking_no_slot_available">لا يوجد موعد خلال الأسابيع القادمة. حاول لاحقًا.</string>
+    <string name="booking_slot_suggested_toast">موعد مقترح: %1$s الساعة %2$s</string>
+    <string name="booking_slot_conflict">تم حجز هذا الموعد للتو. موعد جديد: %1$s الساعة %2$s. يرجى التأكيد مرة أخرى.</string>
+    <string name="service_men_cut">قصّ رجالي</string>
+    <string name="service_men_beard">تشذيب لحية</string>
+    <string name="service_men_combo">قصّ + لحية</string>
+    <string name="service_men_styling">تصفيف / لمسة أخيرة</string>
+    <string name="service_women_cut">قصّ نسائي</string>
+    <string name="service_women_brush">براشينغ</string>
+    <string name="service_women_color">صبغة / خصل</string>
+    <string name="service_women_care">عناية / علاج</string>
 
     <!-- Owner -->
     <string name="owner_dashboard">لوحة التحكم</string>
@@ -84,6 +122,7 @@
     <string name="profile_saved_success">تم حفظ الملف بنجاح!</string>
 
     <!-- Search -->
+    <string name="search_current_filters">عوامل التصفية الحالية</string>
     <string name="search_mode">وضع البحث</string>
     <string name="view_list">عرض القائمة</string>
     <string name="view_map">عرض على الخريطة</string>
@@ -94,4 +133,48 @@
     <!-- Map -->
     <string name="back">رجوع</string>
     <string name="no_salon_found">لم يتم العثور على صالونات لهذه المعايير</string>
+
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_salons">الصالونات</string>
+    <string name="nav_map">الخريطة</string>
+    <string name="nav_my_bookings">حجوزاتي</string>
+    <string name="nav_my_account">الحساب</string>
+
+    <string name="profile_role_section">مسجّل كـ</string>
+    <string name="profile_logout">تسجيل الخروج</string>
+    <string name="role_label_client">زبون — حجز المواعيد</string>
+    <string name="role_label_owner_men">مالك صالون رجالي</string>
+    <string name="role_label_owner_women">مالك صالون للسيدات</string>
+
+    <string name="owner_welcome_title">إدارة صالونك</string>
+    <string name="owner_welcome_subtitle">استخدم القائمة السفلية للملف أو الحجوزات الواردة.</string>
+    <string name="owner_booking_count">%d حجز(ات)</string>
+    <string name="owner_bookings_list_hint">اضغط على حجز لعرض التفاصيل.</string>
+    <string name="owner_booking_detail_title">تفاصيل الحجز</string>
+    <string name="owner_detail_client_line">%1$s (%2$s)</string>
+    <string name="owner_detail_client_user">اسم المستخدم: %s</string>
+    <string name="owner_detail_client_name">الزبون: %s</string>
+    <string name="owner_detail_phone">الهاتف: %s</string>
+    <string name="owner_salon_already_created">لديك ملف صالون. يمكنك تحديث البيانات أدناه.</string>
+    <string name="hours_section_title">ساعات العمل</string>
+    <string name="hours_weekdays">الإثنين–الجمعة</string>
+    <string name="hours_saturday">السبت</string>
+    <string name="hours_sunday">الأحد</string>
+    <string name="open_saturday">مفتوح السبت</string>
+    <string name="open_sunday">مفتوح الأحد</string>
+    <string name="hint_time_from_to">مثال 09:00</string>
+    <string name="establishment_search_hint">البحث باسم الصالون</string>
+    <string name="sort_by_distance">ترتيب حسب المسافة</string>
+    <string name="distance_km_format">%1$.1f كم</string>
+    <string name="owner_detail_status">الحالة: %s</string>
+    <string name="owner_detail_payment">الدفع: %s</string>
+    <string name="owner_detail_duration">المدة: %1$d دقيقة</string>
+    <string name="owner_accept_booking">قبول</string>
+    <string name="owner_reject_booking">رفض</string>
+    <string name="my_booking_actions_title">الحجز</string>
+    <string name="my_booking_cancel">إلغاء الحجز</string>
+    <string name="my_booking_reschedule">إعادة الجدولة</string>
+    <string name="my_booking_cancelled">تم إلغاء الحجز</string>
+    <string name="my_booking_cannot_cancel">لا يمكن تعديل هذا الحجز</string>
+    <string name="profile_label_username">اسم المستخدم</string>
 </resources>

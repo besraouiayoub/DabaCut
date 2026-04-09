@@ -4,11 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.dabacut.R;
 
-public class CategorySelectionActivity extends AppCompatActivity {
+public class CategorySelectionActivity extends BaseToolbarActivity {
 
     public static final String EXTRA_CATEGORY = "category";
 
@@ -26,6 +24,11 @@ public class CategorySelectionActivity extends AppCompatActivity {
         btnPremium.setOnClickListener(v -> openSearchMode("premium"));
     }
 
+    @Override
+    protected int toolbarTitleRes() {
+        return R.string.choose_category;
+    }
+
     private void openSearchMode(String category) {
         Intent current = getIntent();
 
@@ -34,12 +37,8 @@ public class CategorySelectionActivity extends AppCompatActivity {
                 current.getStringExtra(LanguageSelectionActivity.EXTRA_LANGUAGE));
         intent.putExtra(RoleSelectionActivity.EXTRA_ROLE,
                 current.getStringExtra(RoleSelectionActivity.EXTRA_ROLE));
-        intent.putExtra(LoginActivity.EXTRA_NAME,
-                current.getStringExtra(LoginActivity.EXTRA_NAME));
-        intent.putExtra(LoginActivity.EXTRA_PHONE,
-                current.getStringExtra(LoginActivity.EXTRA_PHONE));
-        intent.putExtra(LoginActivity.EXTRA_EMAIL,
-                current.getStringExtra(LoginActivity.EXTRA_EMAIL));
+        intent.putExtra(LoginActivity.EXTRA_USERNAME,
+                current.getStringExtra(LoginActivity.EXTRA_USERNAME));
         intent.putExtra(GenderSelectionActivity.EXTRA_GENDER,
                 current.getStringExtra(GenderSelectionActivity.EXTRA_GENDER));
         intent.putExtra(EXTRA_CATEGORY, category);

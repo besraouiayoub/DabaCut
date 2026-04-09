@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_title"
+            android:textColor="@color/text_primary"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/register_subtitle"
+            android:textColor="@color/text_secondary"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/etUsername"
+            style="@style/DabaEditText"
+            android:layout_marginTop="32dp"
+            android:hint="@string/hint_username"
+            android:inputType="text"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            style="@style/DabaEditText"
+            android:layout_marginTop="16dp"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/etPasswordConfirm"
+            style="@style/DabaEditText"
+            android:layout_marginTop="16dp"
+            android:hint="@string/hint_password_confirm"
+            android:inputType="textPassword"
+            android:importantForAutofill="no" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            style="@style/DabaButtonPrimary"
+            android:layout_marginTop="28dp"
+            android:text="@string/btn_register" />
+
+    </LinearLayout>
+</ScrollView>

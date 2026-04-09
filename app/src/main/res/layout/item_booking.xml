@@ -2,25 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp"
+    android:layout_marginBottom="12dp"
     android:background="@drawable/bg_card"
-    android:layout_marginBottom="12dp">
+    android:minHeight="72dp"
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/tvSalonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nom du Salon"
+        android:textColor="@color/text_primary"
         android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="@color/text_primary" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvService"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Service"
         android:layout_marginTop="4dp"
         android:textColor="@color/electric_blue" />
 
@@ -28,9 +27,26 @@
         android:id="@+id/tvDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Date et Heure"
         android:layout_marginTop="4dp"
         android:textColor="@color/text_secondary"
         android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvBookingStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tvBookingPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/text_primary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
 
 </LinearLayout>

@@ -35,11 +35,24 @@
 
     <!-- Login -->
     <string name="login_title">Login</string>
+    <string name="login_username_password_hint">Sign in with your username and password.</string>
     <string name="enter_info">Enter your information</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_password_confirm">Confirm password</string>
     <string name="hint_full_name">Full Name</string>
     <string name="hint_phone">Phone</string>
     <string name="hint_email">Email</string>
     <string name="btn_continue">Continue</string>
+    <string name="btn_login">Log in</string>
+    <string name="btn_create_account">Create account</string>
+    <string name="register_title">Create account</string>
+    <string name="register_subtitle">Choose a username and password. You will use them to sign in.</string>
+    <string name="btn_register">Register</string>
+    <string name="error_username_taken">This username is already taken</string>
+    <string name="error_password_mismatch">Passwords do not match</string>
+    <string name="error_bad_credentials">Invalid username or password</string>
+    <string name="error_role_mismatch">This account does not match the selected role.</string>
 
     <!-- Establishment List -->
     <string name="available_salons">Available Salons</string>
@@ -48,6 +61,8 @@
     <string name="btn_book">Book Now</string>
     <string name="salon_name_placeholder">Salon Name</string>
     <string name="description_placeholder">Description</string>
+    <string name="address_label">Address: %s</string>
+    <string name="contact_label">Contact: %s</string>
 
     <!-- Booking -->
     <string name="confirm_booking">Confirm Booking</string>
@@ -59,7 +74,45 @@
     <string name="remarque_optional">Notes (Optional)</string>
     <string name="hint_notes">Special instructions...</string>
     <string name="booking_confirmed">Booking confirmed!</string>
+    <string name="booking_guest_name">Guest</string>
+    <string name="booking_guest_phone">0000000000</string>
     <string name="fill_all_fields">Please fill all fields</string>
+    <string name="booking_form_subtitle">Complete your booking</string>
+    <string name="booking_slot_fixed_hint">Date and time are assigned by the salon and cannot be changed.</string>
+    <string name="booking_price_label">Total</string>
+    <string name="booking_confirm_action">Review and confirm</string>
+    <string name="booking_confirm_dialog_title">Confirm this booking?</string>
+    <string name="booking_confirm_dialog_body">Salon: %1$s\nService: %2$s\nDate: %3$s\nTime: %4$s\nApprox. duration: %7$d min\nPayment: %8$s\n\nTotal: %5$s\n\nNotes: %6$s</string>
+    <string name="booking_duration_label">Approx. duration: %1$d min</string>
+    <string name="payment_method_title">Payment</string>
+    <string name="payment_at_salon">Pay at salon</string>
+    <string name="payment_online_demo">Pay online (demo)</string>
+    <string name="booking_status_pending">Pending</string>
+    <string name="booking_status_confirmed">Confirmed</string>
+    <string name="booking_status_rejected">Rejected</string>
+    <string name="booking_status_cancelled">Cancelled</string>
+    <string name="notification_channel_bookings_name">Booking reminders</string>
+    <string name="notification_channel_bookings_desc">Reminders before your confirmed appointment</string>
+    <string name="booking_reminder_notif_title">Upcoming appointment</string>
+    <string name="booking_reminder_24h_body">%1$s — appointment on %2$s at %3$s (in 24h)</string>
+    <string name="booking_reminder_1h_body">%1$s — your appointment is at %2$s (in 1h)</string>
+    <string name="booking_dialog_confirm_yes">Confirm</string>
+    <string name="owner_detail_price">Total: %s</string>
+    <string name="owner_detail_notes">Notes: %s</string>
+    <string name="booking_services_section_title">Services and prices</string>
+    <string name="booking_services_picker_hint">Tick the services you want. Each line shows the price for that service.</string>
+    <string name="booking_no_service_selected">Tick at least one service.</string>
+    <string name="booking_no_slot_available">No free slot found in the next few weeks. Try again later.</string>
+    <string name="booking_slot_suggested_toast">Suggested slot: %1$s at %2$s</string>
+    <string name="booking_slot_conflict">This slot was just booked. New suggested slot: %1$s at %2$s. Please confirm again.</string>
+    <string name="service_men_cut">Men\'s haircut</string>
+    <string name="service_men_beard">Beard trim</string>
+    <string name="service_men_combo">Haircut + beard</string>
+    <string name="service_men_styling">Styling / finish</string>
+    <string name="service_women_cut">Women\'s haircut</string>
+    <string name="service_women_brush">Brushing</string>
+    <string name="service_women_color">Color / highlights</string>
+    <string name="service_women_care">Treatment / care</string>
 
     <!-- Owner -->
     <string name="owner_dashboard">Dashboard</string>
@@ -82,6 +135,7 @@
     <string name="profile_saved_success">Profile saved successfully!</string>
 
     <!-- Search -->
+    <string name="search_current_filters">Your current filters</string>
     <string name="search_mode">Search Mode</string>
     <string name="view_list">View List</string>
     <string name="view_map">View on Map</string>
@@ -91,4 +145,51 @@
 
     <!-- Map -->
     <string name="back">Back</string>
+    <string name="no_salon_found">No salons found for these filters</string>
+
+    <!-- Bottom navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_salons">Salons</string>
+    <string name="nav_map">Map</string>
+    <string name="nav_my_bookings">My bookings</string>
+    <string name="nav_my_account">Account</string>
+
+    <string name="profile_role_section">Signed in as</string>
+    <string name="profile_logout">Log out</string>
+    <string name="role_label_client">Client — book appointments</string>
+    <string name="role_label_owner_men">Salon owner (men\'s salon)</string>
+    <string name="role_label_owner_women">Salon owner (women\'s salon)</string>
+
+    <!-- Owner dashboard -->
+    <string name="owner_welcome_title">Manage your salon</string>
+    <string name="owner_welcome_subtitle">Use the bottom menu to open your profile or incoming bookings.</string>
+    <string name="owner_booking_count">%d booking(s)</string>
+    <string name="owner_bookings_list_hint">Tap a booking to see details.</string>
+    <string name="owner_booking_detail_title">Booking details</string>
+    <string name="owner_detail_client_line">%1$s (%2$s)</string>
+    <string name="owner_detail_client_user">Username: %s</string>
+    <string name="owner_detail_client_name">Client: %s</string>
+    <string name="owner_detail_phone">Phone: %s</string>
+    <string name="owner_salon_already_created">You already have a salon profile. You can update details below.</string>
+    <string name="hours_section_title">Opening hours</string>
+    <string name="hours_weekdays">Mon–Fri</string>
+    <string name="hours_saturday">Saturday</string>
+    <string name="hours_sunday">Sunday</string>
+    <string name="open_saturday">Open Saturday</string>
+    <string name="open_sunday">Open Sunday</string>
+    <string name="hint_time_from_to">e.g. 09:00</string>
+    <string name="establishment_search_hint">Search by salon name</string>
+    <string name="sort_by_distance">Sort by distance</string>
+    <string name="distance_km_format">%1$.1f km</string>
+    <string name="owner_detail_status">Status: %s</string>
+    <string name="owner_detail_payment">Payment: %s</string>
+    <string name="owner_detail_duration">Duration: %1$d min</string>
+    <string name="owner_accept_booking">Accept</string>
+    <string name="owner_reject_booking">Decline</string>
+    <string name="my_booking_actions_title">Booking</string>
+    <string name="my_booking_cancel">Cancel booking</string>
+    <string name="my_booking_reschedule">Reschedule</string>
+    <string name="my_booking_cancelled">Booking cancelled</string>
+    <string name="my_booking_cannot_cancel">This booking can no longer be changed</string>
+    <string name="profile_label_username">Username</string>
 </resources>

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,46 +14,44 @@
             android:layout_height="wrap_content"
             android:text="@string/login_title"
             android:textColor="@color/text_primary"
-            android:textStyle="bold"
-            android:textSize="28sp" />
+            android:textSize="28sp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@string/enter_info"
+            android:text="@string/login_username_password_hint"
             android:textColor="@color/text_secondary"
             android:textSize="15sp" />
 
         <EditText
-            android:id="@+id/etName"
+            android:id="@+id/etUsername"
             style="@style/DabaEditText"
             android:layout_marginTop="32dp"
-            android:hint="@string/hint_full_name"
-            android:inputType="textPersonName"
+            android:hint="@string/hint_username"
+            android:inputType="text"
             android:importantForAutofill="no" />
 
         <EditText
-            android:id="@+id/etPhone"
+            android:id="@+id/etPassword"
             style="@style/DabaEditText"
             android:layout_marginTop="16dp"
-            android:hint="@string/hint_phone"
-            android:inputType="phone"
-            android:importantForAutofill="no" />
-
-        <EditText
-            android:id="@+id/etEmail"
-            style="@style/DabaEditText"
-            android:layout_marginTop="16dp"
-            android:hint="@string/hint_email"
-            android:inputType="textEmailAddress"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
             android:importantForAutofill="no" />
 
         <Button
-            android:id="@+id/btnContinue"
+            android:id="@+id/btnLogin"
             style="@style/DabaButtonPrimary"
-            android:layout_marginTop="28dp"
-            android:text="@string/btn_continue" />
+            android:layout_marginTop="24dp"
+            android:text="@string/btn_login" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            style="@style/DabaButtonSecondary"
+            android:layout_marginTop="12dp"
+            android:text="@string/btn_create_account" />
 
     </LinearLayout>
 </ScrollView>

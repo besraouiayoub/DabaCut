@@ -7,13 +7,11 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.widget.Button;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.dabacut.R;
 
 import java.util.Locale;
 
-public class LanguageSelectionActivity extends AppCompatActivity {
+public class LanguageSelectionActivity extends BaseToolbarActivity {
 
     public static final String EXTRA_LANGUAGE = "language";
 
@@ -31,6 +29,16 @@ public class LanguageSelectionActivity extends AppCompatActivity {
         btnAr.setOnClickListener(v -> setLocale("ar"));
     }
 
+    @Override
+    protected boolean shouldShowToolbarUp() {
+        return false;
+    }
+
+    @Override
+    protected int toolbarTitleRes() {
+        return R.string.choose_language;
+    }
+
     private void setLocale(String lang) {
         Locale myLocale = new Locale(lang);
         Resources res = getResources();
@@ -38,7 +46,7 @@ public class LanguageSelectionActivity extends AppCompatActivity {
         Configuration conf = res.getConfiguration();
         conf.setLocale(myLocale);
         res.updateConfiguration(conf, dm);
-        
+
         Intent intent = new Intent(this, RoleSelectionActivity.class);
         intent.putExtra(EXTRA_LANGUAGE, lang);
         startActivity(intent);

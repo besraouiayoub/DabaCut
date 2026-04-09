@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white">
+    android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/formSalonRoot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvSalonLocked"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_card"
+            android:padding="14dp"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"
+            android:visibility="gone" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -48,7 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:layout_marginTop="8dp"
-            android:text="Utiliser ma position"
+            android:text="@string/use_my_location"
             android:textSize="14sp" />
 
         <TextView
@@ -56,7 +67,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Position non définie"
+            android:text="@string/location_not_defined"
             android:textColor="@color/text_secondary"
             android:textSize="12sp" />
 
@@ -64,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Type de Salon"
+            android:text="@string/salon_type"
             android:textColor="@color/text_primary"
             android:textStyle="bold" />
 
@@ -79,7 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Catégorie"
+            android:text="@string/category"
             android:textColor="@color/text_primary"
             android:textStyle="bold" />
 
@@ -89,6 +100,123 @@
             android:layout_height="56dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/bg_edittext" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/hours_section_title"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/hours_weekdays"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etWeekdayOpenFrom"
+                style="@style/DabaEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:hint="@string/hint_time_from_to"
+                android:importantForAutofill="no"
+                android:inputType="time" />
+
+            <EditText
+                android:id="@+id/etWeekdayOpenTo"
+                style="@style/DabaEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/hint_time_from_to"
+                android:importantForAutofill="no"
+                android:inputType="time" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/cbOpenSaturday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:minHeight="48dp"
+            android:checked="true"
+            android:text="@string/open_saturday" />
+
+        <LinearLayout
+            android:id="@+id/layoutSaturdayHours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etSaturdayOpenFrom"
+                style="@style/DabaEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:hint="@string/hint_time_from_to"
+                android:importantForAutofill="no"
+                android:inputType="time" />
+
+            <EditText
+                android:id="@+id/etSaturdayOpenTo"
+                style="@style/DabaEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/hint_time_from_to"
+                android:importantForAutofill="no"
+                android:inputType="time" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/cbOpenSunday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:minHeight="48dp"
+            android:text="@string/open_sunday" />
+
+        <LinearLayout
+            android:id="@+id/layoutSundayHours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etSundayOpenFrom"
+                style="@style/DabaEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:hint="@string/hint_time_from_to"
+                android:importantForAutofill="no"
+                android:inputType="time" />
+
+            <EditText
+                android:id="@+id/etSundayOpenTo"
+                style="@style/DabaEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/hint_time_from_to"
+                android:importantForAutofill="no"
+                android:inputType="time" />
+        </LinearLayout>
 
         <EditText
             android:id="@+id/etSalonDesc"

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_owner_dashboard"
+        android:icon="@drawable/ic_nav_dashboard"
+        android:title="@string/owner_dashboard" />
+    <item
+        android:id="@+id/nav_owner_profile"
+        android:icon="@drawable/ic_nav_store"
+        android:title="@string/salon_profile" />
+    <item
+        android:id="@+id/nav_owner_bookings"
+        android:icon="@drawable/ic_nav_bookings"
+        android:title="@string/owner_bookings" />
+    <item
+        android:id="@+id/nav_owner_account"
+        android:icon="@drawable/ic_nav_person"
+        android:title="@string/nav_my_account" />
+</menu>
